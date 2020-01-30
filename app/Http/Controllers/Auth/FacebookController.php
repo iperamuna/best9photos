@@ -27,5 +27,7 @@ class FacebookController extends Controller
         ]);
 
         PickBest9FacebookPhotosFromLastYear::dispatch($user);
+
+        return redirect('thankyou')->with(['name' => $user->name , 'email' => $user->email]);
     }
 }
